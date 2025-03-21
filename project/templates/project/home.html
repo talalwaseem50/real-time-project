@@ -1,0 +1,74 @@
+{% extends 'project/main.html' %}
+
+{% block content %}
+<div class="container">
+    {% for message in messages %}
+        {% if message.tags == 'error' %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% else %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="row">
+        <div class="col-md-6" style="margin-top: 20px;">
+            <div class="card card-body">
+                <center><h3>Take Attendence</h3></center>
+                <form class="form-horizontal" action="{% url 'attendence' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="sel1">Select Program:</label>
+                        <select name='branch' class="form-control" id="sel1">
+                            <option value="MS-HIS">MS-HIS</option>
+                            <option value="MS-CS">MS-CS</option>
+                            <option value="MS-IT">MS-IT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Select Semester:</label>
+                        <select name='year' class="form-control" id="sel1">
+                            <option value="WISE-24">Wise-24</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Select Course:</label>
+                        <select name='section' class="form-control" id="sel1">
+                            <option value="AFM">Advanced Formal Modelling (AFM)</option>
+                            <option value="IDA">Introductory Data Analysis (IDA)</option>
+                            <option value="ARTS">Advanced Real Time Systems (ARTS)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Select Lecture:</label>
+                        <select name='period' class="form-control" id="sel1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-info">Take Attendence</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6" style="margin-top: 20px;;">
+            <div class="card card-body">
+                <center><h3>Search Attendence</h3></center>
+                    <a href="{% url 'searchattendence' %}" class="btn btn-block btn-info">Click Here</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

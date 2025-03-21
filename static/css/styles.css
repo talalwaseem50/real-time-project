@@ -1,0 +1,116 @@
+/* Navbar Background - Dark Navy Blue */
+.navbar {
+    background-color: #003366; /* Dark Navy Blue for the navbar */
+    border-bottom: 2px solid #00224D; /* Slightly darker navy for depth */
+}
+
+/* Navbar text color */
+.navbar .nav-link {
+    color: #FFFFFF !important; /* White text for clarity */
+}
+
+/* Button Style - Vibrant Teal */
+.btn-info {
+    background-color: #1ABC9C; /* Vibrant teal for buttons */
+    border-color: #16A085;     /* Slightly darker teal for the border */
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern touch */
+}
+
+/* Button Hover Effect */
+.btn-info:hover {
+    background-color: #16A085; /* Slightly darker teal on hover */
+    border-color: #148D7F;     /* Darker border on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Button Active Effect */
+.btn-info:active {
+    background-color: #148D7F; /* Darker teal on click */
+    border-color: #148D7F;
+    transform: translateY(0);
+}
+
+/* Focused button style */
+.btn-info:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.7); /* Soft teal glow */
+}
+
+/* Form Control Style */
+.form-control {
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 15px;
+    border: 1px solid #E0E0E0; /* Light gray border */
+    height: 45px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Focus state for input fields */
+.form-control:focus {
+    border-color: #1ABC9C; /* Teal border on focus */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Teal glow */
+    outline: none;
+}
+
+/* Style for select fields (dropdowns) */
+select.form-control {
+    padding-right: 15px;
+    font-size: 15px;
+}
+
+/* Hover and focus states for select dropdown */
+select.form-control:hover, select.form-control:focus {
+    border-color: #1ABC9C; /* Teal border */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Teal glow */
+}
+
+/* Style the card bodies */
+.card-body {
+    background-color: #FFFFFF; /* Clean white background for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Style for headings inside cards */
+.card-body h3 {
+    color: #333333; /* Dark charcoal for readability */
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Add spacing between rows */
+.row {
+    margin-bottom: 20px;
+}
+
+/* Center text for elements like cards and buttons */
+.center-text {
+    text-align: center;
+}
+
+/* Fancy alert box styles */
+.alert {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 25px;
+}
+
+/* Success alert box style - Electric Yellow */
+.alert-success {
+    background-color: #388E3C;
+    color: white;
+}
+
+/* Error alert box style */
+.alert-danger {
+    background-color: #E74C3C; /* Vibrant red for errors */
+    color: white;
+}
